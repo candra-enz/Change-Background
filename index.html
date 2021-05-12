@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+
+        }
+
+     button{
+          
+          background-color: rgb(52, 13, 226);
+          color: rgb(255, 255, 255);
+          outline: none;
+          cursor: pointer;
+          width: 240px;
+          height: 50px;
+          border-radius: 4px;
+          border: thin solid #888;
+          box-shadow: 1px 1px 1px  grey;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 700;
+          font-size: medium;
+
+          
+      }
+
+
+      
+        
+    </style>
+</head>
+<body id="body">
+    
+
+<button id="button" type="button">Change Color</button>
+
+   
+
+
+
+    <script >
+        //ambil elemen button
+            const button = document.querySelector('button');
+            //ambil elemen body
+            const body = document.querySelector('body');
+
+            //event berjalan ketika button di click
+            body.addEventListener('click', function () {
+
+                //macari nilai dengan fungsi Math random dan  di bulatkan dengan round
+                const r = Math.round(Math.random() * 255 + 1);
+                const g = Math.round(Math.random() * 255 + 1);
+                const b = Math.round(Math.random() * 255 + 1);
+
+                //input variabel r,g,b kedalam style
+                body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+            });
+    </script>
